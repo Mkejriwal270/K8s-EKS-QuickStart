@@ -4,7 +4,7 @@ So it’s 2021 & everyone wants to push their apps to Kubernetes. But let’s fa
 
 Not anymore, though!
 
-This is a solution that enables you to start deploying and testing your application on Amazon’s Elastic Kubernetes Service with practically zero knowledge of the underlying architecture. All you need is an AWS Account, an IAM Admin User, & your source code with its Dockerfile, & that’s it.  With just a few clicks, you'll be good to deploy a fully-managed Kubernetes cluster with a live runnning application accessible via a public/private URL. No CLIs, no utilities and no dependencies!
+Here is a solution that enables you to start deploying and testing your application on Amazon’s Elastic Kubernetes Service with practically zero knowledge of the underlying architecture. All you need is an AWS Account, an IAM Admin User, & your source code with its Dockerfile, & that’s it.  With just a few clicks, you'll be good to deploy a fully-managed Kubernetes cluster with a live runnning application accessible via a public/private URL. No CLIs, no utilities and no dependencies!
 
 Let’s get started.
 
@@ -20,7 +20,7 @@ If you don't already have an AWS account, you can create one by following [these
 
 Make sure you have an IAM User with admin access which can provision resources on your behalf through GitHub Actions.
 
-**\*Please note that implementing this solution will incur costs for provisioning and using AWS resources, even if you are using a free-tier enabled account, so proceed at your own discretion. Go through the comprehensive list of provisioned resources below and use [AWS price calculator](https://calculator.aws/#/) to determine how much you may have to pay based on your usage:**
+**\*Please note that implementing this solution will incur costs for provisioning and using AWS resources, even if you use a free-tier enabled account, so proceed at your own discretion. Go through the comprehensive list of provisioned resources below and use [AWS price calculator](https://calculator.aws/#/) to determine how much you may have to pay based on your usage:**
 
 | AWS Resource               | # of Instances |
 |----------------------------|----------------|
