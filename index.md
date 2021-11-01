@@ -14,7 +14,7 @@ Let’s get started.
 
 For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository in your GitHub account. It has been created as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) so you can just click on **Use this template** on the homepage to create a new repository of the same name directly in your account with the existing file structure intact.
 
-[Image](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/gh-pages/images/Screenshot%20(159).png)
+![Image](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/gh-pages/images/Screenshot%20(159).png)
 
 ### 2. AWS Setup
 
