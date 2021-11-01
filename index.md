@@ -12,7 +12,9 @@ Let’s get started.
 
 ### 1. Cloning the repository
 
-For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository in your GitHub account. It has been created as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) so you can just click on **Use this template** to create a new repository of the same name directly in your account with the existing file structure intact.
+For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository in your GitHub account. It has been created as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) so you can just click on **Use this template** on the homepage to create a new repository of the same name directly in your account with the existing file structure intact.
+
+[Image](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/gh-pages/images/Screenshot%20(159).png)
 
 ### 2. AWS Setup
 
@@ -53,7 +55,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+[Link](url) and ![Image](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/gh-pages/images/Screenshot%20(159).png)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
