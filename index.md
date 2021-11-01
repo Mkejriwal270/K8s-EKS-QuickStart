@@ -12,13 +12,16 @@ Let’s get started.
 
 ### 1. Cloning the repository
 
-For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository in your GitHub account. This repository has been created as a template so you can just click on "Use this template" to create a new repository of the same name directly in your account with the existing file structure intact.
+For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository in your GitHub account. It has been created as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) so you can just click on **Use this template** to create a new repository of the same name directly in your account with the existing file structure intact.
 
 ### 2. AWS Setup
 
 If you don't already have an AWS account, you can create one by following [these](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account) steps.
 
 Make sure you have an IAM User with admin access which can provision resources on your behalf through GitHub Actions.
+
+**\*Please note that implementing this solution will incur costs for provisioning and using AWS resources, even if you are using a free-tier enabled account, so proceed at your own discretion. Go through the comprehensive list of provisioned resources provided below and use [AWS price calculator](https://calculator.aws/#/) to get an estimate of how much you will have to pay based on how long you use these resources.
+
 AWS Cloud Account, IAM Admin User, Access Key ID and Secret Key - Documentation
 
 GitHub Actions Secret Creation
