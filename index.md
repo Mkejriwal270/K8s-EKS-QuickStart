@@ -1,4 +1,4 @@
-## How to run your apps on EKS with just a few clicks
+# How to run your apps on EKS with just a few clicks
 
 So it’s 2021 & everyone wants to push their apps to Kubernetes. But let’s face it, this is still unknown territory for a lot of teams, especially those trying to modernise their existing apps. Also, having to go through endless tutorials & blogs, just for getting started, can be daunting. We know there's Minikube & similar tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
 
@@ -8,9 +8,22 @@ This is a solution that enables you to start deploying and testing your applicat
 
 Let’s get started.
 
-### Setting things up
+## Setting things up
 
-For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository and push it to your GitHub account.
+### 1. Cloning the repository
+
+For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository in your GitHub account. This repository has been created as a template so you can just click on "Use this template" to create a new repository of the same name directly in your account with the existing file structure intact.
+
+### 2. AWS Setup
+
+If you don't already have an AWS account, you can create one by following [these](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account) steps.
+
+Make sure you have an IAM User with admin access which can provision resources on your behalf through GitHub Actions.
+AWS Cloud Account, IAM Admin User, Access Key ID and Secret Key - Documentation
+
+GitHub Actions Secret Creation
+
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -20,6 +33,8 @@ Syntax highlighted code block
 # Header 1
 ## Header 2
 ### Header 3
+
+\*\*
 
 - Bulleted
 - List
