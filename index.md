@@ -20,7 +20,7 @@ If you don't already have an AWS account, you can create one by following [these
 
 Make sure you have an IAM User with admin access which can provision resources on your behalf through GitHub Actions.
 
-**\*Please note that implementing this solution will incur costs for provisioning and using AWS resources, even if you are using a free-tier enabled account, so proceed at your own discretion. Go through the comprehensive list of provisioned resources provided below and use [AWS price calculator](https://calculator.aws/#/) to get an estimate of how much you will have to pay based on how long you use these resources.
+**\*Please note that implementing this solution will incur costs for provisioning and using AWS resources, even if you are using a free-tier enabled account, so proceed at your own discretion. Go through the comprehensive list of provisioned resources provided below and use [AWS price calculator](https://calculator.aws/#/) to get an estimate of how much you will have to pay based on how long you use these resources.**
 
 AWS Cloud Account, IAM Admin User, Access Key ID and Secret Key - Documentation
 
