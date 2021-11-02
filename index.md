@@ -79,5 +79,6 @@ On your repository homepage, go to **Actions** tab, and click on **Fire-it-Up** 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-intro.png)
 <br />
 <br />
+<br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-dropdown.png)
 <br />
