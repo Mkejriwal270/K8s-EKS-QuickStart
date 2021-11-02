@@ -41,14 +41,14 @@ Your AWS account is now all set to host your EKS cluster!
 Now you need to configure your repository so that GitHub Actions can deploy resources in your account. Here you will need:
 
 - Your Access Key ID and Secret Access Key generated in the previous step
-- Your AWS Account ID - [How to get yours](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
+- Your AWS Account ID - [How to know yours](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
 - A Personal Access Token for your GitHub Account with full access to your repo and workflows - [Generate yours](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-Once you have all these details handy, go to you your repository **Settings** > **Secrets** and add a new secret as shown below. Copy the AWS Access Key ID you created and paste in the secret value, without any spaces or line breaks.
+Once you have all these details handy, go to you your repository **Settings** > **Secrets** and add a new secret **AWS_ACCESS_KEY_ID** as shown below. Copy the AWS Access Key ID you created and paste in the secret value, without any spaces or line breaks.
 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Create-Secret.png)
 
-Similarly
+Similarly create all the secrets as shown below:
 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Secret-List.png)
 
