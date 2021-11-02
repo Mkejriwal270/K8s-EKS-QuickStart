@@ -1,10 +1,10 @@
-# How to run your apps on EKS with just a few clicks
+# How to deploy your apps to EKS instantly
 
-So it’s 2021 & everyone wants to push their apps to Kubernetes. But let’s face it, this is still unknown territory for a lot of teams, especially those trying to modernise their existing apps. Also, having to go through endless tutorials & blogs, just for getting started, can be daunting. We know there's Minikube & similar tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
+So it’s 2021 & everyone wants to push their apps to Kubernetes. But let’s face it, this is still unknown territory for a lot of teams, especially those trying to modernise their existing legacy apps. Having to go through endless tutorials & blogs just for getting started can be daunting, especially when you have deadlines to meet. We know there's Minikube & similar other tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
 
 Not anymore, though!
 
-Here is a solution that enables you to start deploying and testing your application on Amazon’s Elastic Kubernetes Service with practically zero knowledge of the underlying architecture. All you need is an AWS Account, an IAM Admin User, & your source code with its Dockerfile, & that’s it.  With just a few clicks, you'll be good to deploy a fully-managed Kubernetes cluster with a live runnning application accessible via a public/private URL. No CLIs, no utilities and no dependencies!
+Here is a solution that helps you start deploying and testing your application on Amazon’s Elastic Kubernetes Service with practically zero knowledge of the underlying architecture. All you need is an AWS Account, an IAM Admin User, & your source code with its Dockerfile. That’s it!  With just a few clicks, you'll be good to deploy a fully-managed Kubernetes cluster with a live runnning application accessible via a public/private URL. No CLIs, no utilities and no dependencies!
 
 Let’s get started.
 
@@ -30,7 +30,7 @@ Make sure you have an IAM User with admin access which can provision resources\*
 | t2.small worker nodes      | 2              |
 | NAT Gateway (For new VPCs) | 1              |
 
-Once your IAM user is configured, you will have to generate programmatic access key for the user so that it can be used by GitHub Actions to access your AWS account. Follow the instructions [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) and save the credentials for the next steps.
+Once your IAM user is configured, you will have to generate a programmatic access key for the user with which GitHub Actions can access your AWS account. Follow the instructions [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) and save the credentials for the next steps.
 
 Optionally, if you want to use an existing AWS account with already configured VPCs, subnets and other networking components, you can take a note of your **VPC ID, Subnet IDs (public and private, if any) and the region where these resources are set up.** You will still need an IAM user and the access key for provisioning the cluster and deploying the application.
 
