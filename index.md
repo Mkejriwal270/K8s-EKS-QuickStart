@@ -73,11 +73,27 @@ For more details go through the [project documentation](https://github.com/Mkejr
 
 Enough with all the setup. It's now time to see things in action, literally!
 
-On your repository homepage, go to **Actions** tab, and click on **Fire-it-Up** (I had to make it dramatic!).
+On your repository homepage, go to **Actions** tab, and click on **Fire-it-Up** ( I had to make it dramatic! )
 
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-intro.png)
 <br />
+This is basically a "parent" GitHub Actions workflow which invokes a series of different "child" workflows based on parameters entered by the user as inputs. These worflows perform the following tasks in the given order:
+
+- Provision EKS cluster, ECR repository and other AWS resources using Terraform
+- Provision Kubernetes RBAC and Ingress resources using Helm
+- Build sample apps using Dockerfiles
+- Deploy sample app images as Kubernetes workloads and expose them via Ingress Controllers using Helm
+
+On the top-right corner, click on **Run workflow** and enter the values in the dropdown form as follows:
+
+1. **Are you using an existing VPC? (true/flase)**: Here you need to specify **true** if you want to use your own pre-configured VPC with the required public and private subnets. Please ensure that your private subnets have a NAT gateway so that your nodes are able to communicate with the Kube API server. If you want the solution to provision a VPC and its components for you, please enter **false**. In this case, ensure that you don't have an existing VPC within the CIDR range **10.0.0.0/16**. The control plane will have both public and private endpoint access so that GitHub Actions can communicate with it.
+2. **Enter cluster name**: The name you want to give to your cluster
+3. **Enter space separated existing subnet ids**: If you opted **true** for the first parameter, you need to enter the IDs of the subnets where you want to deploy your worker nodes. For example - **subnet-xytyc1872j subnet-034792hdjd**. In order to minimize costs, this solution deploys 2 worker nodes by default.
+4. **Enter existing vpc id**: If you opted **true** for the first parameter, you need to specify your VPC id. This value as well the previous one can be left blank in case of new VPCs.
+5. **Enter app version for React**: This solution bootstraps your cluster with 2 sample apps for demo purposes. You can specify any version number of your choice and it will be tagged to your container image and updated in the chart app version. For example - **0.0.1**
+6. **Enter app version for Angular**: See explanation above
+7. **Enter AWS Region**: Enter the AWS region wherein you want to deploy your cluster. For existing VPCs, this should be where your VPC is hosted. For example - **us-east-1**
 <br />
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-dropdown.png)
