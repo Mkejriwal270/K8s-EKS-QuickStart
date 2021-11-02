@@ -1,10 +1,10 @@
 # How to deploy your apps to EKS instantly
 
-So it’s 2021 & everyone wants to push their apps to Kubernetes. But let’s face it, this is still unknown territory for a lot of teams, especially those trying to modernise their existing legacy apps. Having to go through endless tutorials & blogs just for getting started can be daunting, especially when you have deadlines to meet. We know there's Minikube & similar other tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
+So it’s 2021 & everybody wants to push their apps to Kubernetes. But let’s face it, this is still unknown territory for a lot of teams, especially those trying to modernise their existing legacy apps. Having to go through endless tutorials & blogs just for getting started can be daunting, especially when you have deadlines to meet. We know there's Minikube & similar other tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
 
 Not anymore, though!
 
-Here is a solution that helps you start deploying and testing your application on Amazon’s Elastic Kubernetes Service with practically zero knowledge of the underlying architecture. All you need is an AWS Account, an IAM Admin User, & your source code with its Dockerfile. That’s it!  With just a few clicks, you'll be good to deploy a fully-managed Kubernetes cluster with a live runnning application accessible via a public/private URL. No CLIs, no utilities and no dependencies!
+Here is a solution that helps you start deploying and testing your application on Amazon’s Elastic Kubernetes Service with practically zero knowledge of the underlying architecture. It uses a combination of Terraform scripts, Helm Charts and GitHub Actions - Github's in-house CI-CD solution - to orchestrate the deployment seamlessly from your repository. All you need is an AWS Account, an IAM Admin User, & your source code with its Dockerfile. That’s it!  With just a few clicks, you'll be good to deploy a fully-managed Kubernetes cluster with a live runnning application accessible via a public/private URL. No CLIs, no utilities and no dependencies!
 
 Let’s get started.
 
@@ -34,7 +34,7 @@ Once your IAM user is configured, you will have to generate a programmatic acces
 
 Optionally, if you want to use an existing AWS account with already configured VPCs, subnets and other networking components, you can take a note of your **VPC ID, Subnet IDs (public and private, if any) and the region where these resources are set up.** You will still need an IAM user and the access key for provisioning the cluster and deploying the application.
 
-Your AWS account is now all set to host your shiny new K8s cluster
+Your AWS account is now all set to host your EKS cluster!
 
 ### 3. GitHub Actions Configuration:
 
