@@ -44,7 +44,7 @@ Now you need to configure your repository so that GitHub Actions can deploy reso
 - Your AWS Account ID - [How to know yours](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
 - A Personal Access Token for your GitHub Account with full access to your repo and workflows - [Generate yours](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-Once you have all these details handy, go to you your repository **Settings** > **Secrets** and add a new secret **AWS_ACCESS_KEY_ID** as shown below. Copy the AWS Access Key ID you created and paste in the secret value, without any spaces or line breaks.
+Once you have all these details handy, go to your repository **Settings** > **Secrets** and add a new secret **AWS_ACCESS_KEY_ID** as shown below. Copy the AWS Access Key ID you created and paste in the secret value, without any spaces or line breaks.
 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Create-Secret.png)
 
@@ -63,10 +63,13 @@ These secret names are being referred in the GitHub Actions workflows, so it is 
 
 For more details go through the [project documentation](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/main/README.md).
 
-### Jekyll Themes
+## Running the solution
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Enough with all the setup. It's now time to see things in Action, literally!
 
-### Support or Contact
+On your repository homepage, go to **Actions** tab, and click on **Fire-it-Up** (I had to make it dramatic!).
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-intro.png)
+
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-dropdown.png)
+
