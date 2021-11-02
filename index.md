@@ -36,7 +36,8 @@ For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) r
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/repo-page.png)
 <br />
-<br />
+
+
 ### **2. AWS Setup:**
 
 If you don't already have an AWS account, you can create one by following [these](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account) steps.
