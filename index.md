@@ -102,7 +102,7 @@ This is basically a "parent" GitHub Actions workflow which invokes a series of d
 
 On the top-right corner, click on **Run workflow** and enter the values in the dropdown form as follows:
 
-1. **Are you using an existing VPC? (true/flase)**: Here you need to specify **true** if you want to use your own VPC. If you want to create a new VPC, please enter **false**.
+1. **Are you using an existing VPC? (true/flase)**: Here you need to specify **true** if you want to use your own VPC, or **false** if you want to create a new one.
 
 2. **Enter cluster name**: The name you want to give to your cluster
 
