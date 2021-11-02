@@ -60,10 +60,10 @@ Similarly create all the secrets as shown below:
 
 The secret names above refer to the following values:
 
-- **AWS_ACCESS_KEY_ID : Your AWS access key ID**
-- **AWS_SECRET_ACCESS_KEY : Your AWS secret access key**
-- **K8S_QS_TOKEN : Your Personal Access Token created earlier**
-- **AWS_ACCOUNT : Your AWS account ID**
+- **AWS_ACCESS_KEY_ID** : Your AWS access key ID
+- **AWS_SECRET_ACCESS_KEY** : Your AWS secret access key
+- **K8S_QS_TOKEN** : Your Personal Access Token created earlier
+- **AWS_ACCOUNT** : Your AWS account ID
 
 These secret names are being referred in the GitHub Actions workflows, so it is recommended to store them exactly as shown here to avoid runtime issues.
 
