@@ -7,7 +7,7 @@ Here is a solution that helps you start deploying and testing your application o
 Let’s get started.
 <br />
 
-## **Setting things up**
+## **Setting Things Up**
 
 ### **1. Cloning the repository:**
 
@@ -69,7 +69,7 @@ These secret names are being referred in the GitHub Actions workflows, so it is 
 
 For more details go through the [project documentation](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/main/README.md).
 <br />
-## **Running the solution**
+## **Running the Solution**
 
 Enough with all the setup. It's now time to see things in action, literally!
 
