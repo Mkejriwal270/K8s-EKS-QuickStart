@@ -59,10 +59,9 @@ The secret names above refer to the following values:
 - K8S_QS_TOKEN : Your Personal Access Token created earlier
 - AWS_ACCOUNT : Your AWS account ID
 
-These secret names are being referred in the GitHub Actions workflows, so please make sure you modify these only if you know what you're doing. Otherwise, it is recommended to 
-store the secret names exactly as shown here to avoid runtime issues.
+These secret names are being referred in the GitHub Actions workflows, so it is recommended to store them exactly as shown here to avoid runtime issues.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For more details go through the [project documentation](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/main/README.md).
 
 ### Jekyll Themes
 
