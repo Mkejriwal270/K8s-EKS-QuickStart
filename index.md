@@ -6,9 +6,9 @@ Here is a solution that helps you start deploying and testing your application o
 
 Let’s get started.
 <br />
-## **What We Will Be Building**
+## **What We Are Building**
 <br />
-With this solution, we intend to setup a full-fledged EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. The apps will be built using docker and the images will be stored in Amazon's ECR which will be managed as part of this project. As mentioned before, the infrastructure components\*\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
+With this solution, we intend to setup a full-fledged EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. The apps will be built using docker and the images will be stored in Amazon's ECR which will be managed as part of this project. As mentioned before, the infrastructure components\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
 
 Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click. One could go so far as to schedule their workflows to provision their resources in the morning and destroy them at the end of their day. The possibilities of customisation are endless, but for the sake of simplicity, we have ommitted that feature for now.
 
@@ -19,7 +19,7 @@ Users have 2 options of deploying the cluster:
 
 The control plane will have both public and private endpoint access so that GitHub Actions can communicate with it.
 
-**\*\*Please note that implementing this solution will incur costs for provisioning and using AWS resources, even if you use a free-tier enabled account, so proceed at your own discretion. Go through the comprehensive list of provisioned resources below and use [AWS price calculator](https://calculator.aws/#/) to determine how much you may have to pay based on your usage:**
+**\*Please note that implementing this solution will incur costs for provisioning and using AWS resources, even if you use a free-tier enabled account, so proceed at your own discretion. Go through the comprehensive list of provisioned resources below and use [AWS price calculator](https://calculator.aws/#/) to determine how much you may have to pay based on your usage:**
 
 | AWS Resource               | # of Instances |
 |----------------------------|----------------|
@@ -102,11 +102,17 @@ This is basically a "parent" GitHub Actions workflow which invokes a series of d
 On the top-right corner, click on **Run workflow** and enter the values in the dropdown form as follows:
 
 1. **Are you using an existing VPC? (true/flase)**: Here you need to specify **true** if you want to use your own VPC. In case of private subnets, make sure you have a NAT gateway so that your nodes are able to communicate with the Kube API server. If you want to create a new VPC, please enter **false**. In this case, ensure that you don't have an existing VPC within the CIDR range **10.0.0.0/16**.
+
 2. **Enter cluster name**: The name you want to give to your cluster
+
 3. **Enter space separated existing subnet ids**: If you opted **true** for the first parameter, you need to enter the IDs of the subnets where you want to deploy your worker nodes. For example - **subnet-xytyc1872j subnet-034792hdjd**. In order to minimize costs, this solution deploys 2 worker nodes by default. This value as well the next one can be left blank in case of new VPCs.
+
 4. **Enter existing vpc id**: If you opted **true** for the first parameter, you need to specify your VPC id.
+
 5. **Enter app version for React**: You can specify any version number of your choice and it will be tagged to your container image and updated in the chart app version. For example - **0.0.1**
+
 6. **Enter app version for Angular**: Same as above
+
 7. **Enter AWS Region**: Enter the AWS region wherein you want to deploy your cluster. For existing VPCs, this should be where your VPC is hosted. For example - **us-east-1**
 <br />
 <br />
