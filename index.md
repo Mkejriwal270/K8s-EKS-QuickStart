@@ -2,20 +2,23 @@ So it’s 2021 & everybody wants to push their apps to Kubernetes. But let’s f
 
 Not anymore, though!
 
-Here is a solution that helps you start deploying and testing your application on Amazon’s Elastic Kubernetes Service with practically zero knowledge of the underlying architecture. It uses a combination of Terraform scripts, Helm Charts and GitHub Actions - Github's in-house CI-CD solution - to orchestrate the deployment seamlessly from your repository. All you need is an AWS Account, an IAM Admin User, & your source code with its Dockerfile. That’s it!  With just a few clicks, you'll be good to deploy a fully-managed Kubernetes cluster with a live runnning application accessible via a public/private URL. No CLIs, no utilities and no dependencies!
+Here is a solution that helps you start deploying and testing your application on Amazon’s Elastic Kubernetes Service with practically zero knowledge of the underlying architecture. It uses a combination of Terraform scripts, Helm Charts and GitHub Actions to deploy all of the resources seamlessly. All you need is an AWS Account, an IAM Admin User, & your source code with its Dockerfile. That’s it!  With just a few clicks, you'll be good to deploy a fully-managed Kubernetes cluster with a live runnning application accessible via a public/private URL. No CLIs, no utilities and no dependencies!
 
 Let’s get started.
 <br />
 ## **What We Are Building**
 <br />
-With this solution, we intend to setup a full-fledged EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. The apps will be built using docker and the images will be stored in Amazon's ECR which will be managed as part of this project. As mentioned before, the infrastructure components\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
+With this solution, we intend to setup a full-fledged EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. In order to minimize costs, this solution deploys 2 worker nodes by default. The apps will be built using docker and the images will be stored in Amazon's Elastic Container Registry (ECR) which will be managed as part of this project. As mentioned before, the infrastructure components\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
 
-Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click. One could go so far as to schedule their workflows to provision their resources in the morning and destroy them at the end of their day. The possibilities of customisation are endless, but for the sake of simplicity, we have ommitted that feature for now.
+Once the cluster is up and running, NGINX ingress resources are provisioned using helm charts, including a public-facing Network Load Balancer(NLB) as an ingress-controller, which will be the endpoint for your applications. After this, the sample apps are built and pushed as docker-images to ECR and the application workloads are deployed using a separate set of helm-charts. The routes for the apps are configured in the ingress rules.
+
+All of these deployments are orchestrated using Github Actions - Github's in-house CI-CD solution - through a series of cascaded workflows which get executed one after another representing different stages in the deployment pipeline. Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click - again using a separate workflow which ensures that all your deployed resources are deleted and your account is cleaned up.
 
 Users have 2 options of deploying the cluster:
 
-1. **Use an existing VPC and subnets** - If you have an existing cloud environment with pre-configured VPC, subnets, networking components and route tables, you can make use of those and let the solution handle only the cluster part for you
-2. **Use a new VPC** - If you want to create a new VPC in your account, you can do that as well. In this case, your networking components will be managed by the terraform workspace in this repository and will be deleted along with the cluster in case you hit that destroy button.
+1. **Use an existing VPC and subnets** - If you have an existing cloud environment with pre-configured VPC, subnets, networking components and route tables, you can make use of those and let the solution handle only the cluster part for you. In case you use private subnets, make sure you have a NAT gateway so that your nodes are able to communicate with the Kube API server.
+
+2. **Use a new VPC** - If you want to create a new VPC in your account, you can do that as well. In this case, ensure that you don't have an existing VPC within the CIDR range **10.0.0.0/16**. Your networking components will be managed by the terraform workspace in the repository and will be deleted along with the cluster in case you hit that destroy button.
 
 The control plane will have both public and private endpoint access so that GitHub Actions can communicate with it.
 
@@ -101,11 +104,11 @@ This is basically a "parent" GitHub Actions workflow which invokes a series of d
 
 On the top-right corner, click on **Run workflow** and enter the values in the dropdown form as follows:
 
-1. **Are you using an existing VPC? (true/flase)**: Here you need to specify **true** if you want to use your own VPC. In case of private subnets, make sure you have a NAT gateway so that your nodes are able to communicate with the Kube API server. If you want to create a new VPC, please enter **false**. In this case, ensure that you don't have an existing VPC within the CIDR range **10.0.0.0/16**.
+1. **Are you using an existing VPC? (true/flase)**: Here you need to specify **true** if you want to use your own VPC. If you want to create a new VPC, please enter **false**.
 
 2. **Enter cluster name**: The name you want to give to your cluster
 
-3. **Enter space separated existing subnet ids**: If you opted **true** for the first parameter, you need to enter the IDs of the subnets where you want to deploy your worker nodes. For example - **subnet-xytyc1872j subnet-034792hdjd**. In order to minimize costs, this solution deploys 2 worker nodes by default. This value as well the next one can be left blank in case of new VPCs.
+3. **Enter space separated existing subnet ids**: If you opted **true** for the first parameter, you need to enter the IDs of the subnets where you want to deploy your worker nodes. For example - **subnet-xytyc1872j subnet-034792hdjd**. This value as well the next one can be left blank in case of new VPCs.
 
 4. **Enter existing vpc id**: If you opted **true** for the first parameter, you need to specify your VPC id.
 
