@@ -8,6 +8,7 @@ Here is a solution that helps you start deploying and testing your application o
 
 Let’s get started.
 
+<br />
 ## **Setting things up**
 
 ### **1. Cloning the repository:**
@@ -17,7 +18,7 @@ For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) r
 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/repo-page.png)
 
-
+<br />
 ### **2. AWS Setup:**
 
 If you don't already have an AWS account, you can create one by following [these](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account) steps.
@@ -32,14 +33,14 @@ Make sure you have an IAM User with admin access which can provision resources\*
 | t2.small worker nodes      | 2              |
 | NAT Gateway (For new VPCs) | 1              |
 
-
+<br />
 Once your IAM user is configured, you will have to generate a programmatic access key for the user with which GitHub Actions can access your AWS account. Follow the instructions [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) and save the credentials for the next steps.
 
 Optionally, if you want to use an existing AWS account with already configured VPCs, subnets and other networking components, you can take a note of your **VPC ID, Subnet IDs (public and private, if any) and the region where these resources are set up.** You will still need an IAM user and the access key for provisioning the cluster and deploying the application.
 
 Your AWS account is now all set to host your EKS cluster!
 
-
+<br />
 ### **3. GitHub Actions Configuration:**
 
 Now you need to configure your repository so that GitHub Actions can deploy resources in your account. Here you will need:
@@ -50,15 +51,15 @@ Now you need to configure your repository so that GitHub Actions can deploy reso
 
 Once you have all these details handy, go to your repository **Settings** > **Secrets** and add a new secret **AWS_ACCESS_KEY_ID** as shown below. Copy the AWS Access Key ID you created and paste in the secret value, without any spaces or line breaks.
 
-
+<br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Create-Secret.png)
-
+<br />
 
 Similarly create all the secrets as shown below:
 
-
+<br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Secret-List.png)
-
+<br />
 
 The secret names above refer to the following values:
 
@@ -71,16 +72,16 @@ These secret names are being referred in the GitHub Actions workflows, so it is 
 
 For more details go through the [project documentation](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/main/README.md).
 
-
+<br />
 ## **Running the solution**
 
 Enough with all the setup. It's now time to see things in Action, literally!
 
 On your repository homepage, go to **Actions** tab, and click on **Fire-it-Up** (I had to make it dramatic!).
 
-
+<br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-intro.png)
-
-
+<br />
+<br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-dropdown.png)
-
+<br />
