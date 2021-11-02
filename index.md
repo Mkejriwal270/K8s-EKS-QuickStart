@@ -6,6 +6,26 @@ Here is a solution that helps you start deploying and testing your application o
 
 Let’s get started.
 <br />
+## **What We Will Be Building**
+<br />
+With this solution, we intend to setup a full-fledged EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. The apps will be built using docker and the images will be stored in Amazon's ECR which will be managed as part of this project. As mentioned before, the infrastructure components\*\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
+
+Once your testing is completed,
+
+Users have 2 options of deploying the cluster:
+
+1. **Use an existing VPC and subnets** - If you have an existing cloud environment with pre-configured VPC, subnets, networking components and route tables, you can make use of those and let the solution handle only the cluster part for you
+2. **Use a new VPC** - If you want to create a new VPC in your account, you can do that as well. In this case, your networking components will be managed by the terraform workspace in this repository and will be destroyed 
+
+**\*\*Please note that implementing this solution will incur costs for provisioning and using AWS resources, even if you use a free-tier enabled account, so proceed at your own discretion. Go through the comprehensive list of provisioned resources below and use [AWS price calculator](https://calculator.aws/#/) to determine how much you may have to pay based on your usage:**
+
+| AWS Resource               | # of Instances |
+|----------------------------|----------------|
+| EKS Cluster                | 1              |
+| t2.small worker nodes      | 2              |
+| NAT Gateway (For new VPCs) | 1              |
+
+<br />
 
 ## **Setting Things Up**
 
@@ -21,20 +41,11 @@ For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) r
 
 If you don't already have an AWS account, you can create one by following [these](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account) steps.
 
-Make sure you have an IAM User with admin access which can provision resources\*\* on your behalf through GitHub Actions. Follow [this](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) page for more details.
+Make sure you have an IAM User with admin access which can provision resources on your behalf through GitHub Actions. Follow [this](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) page for more details.
 
-**\*\*Please note that implementing this solution will incur costs for provisioning and using AWS resources, even if you use a free-tier enabled account, so proceed at your own discretion. Go through the comprehensive list of provisioned resources below and use [AWS price calculator](https://calculator.aws/#/) to determine how much you may have to pay based on your usage:**
-
-| AWS Resource               | # of Instances |
-|----------------------------|----------------|
-| EKS Cluster                | 1              |
-| t2.small worker nodes      | 2              |
-| NAT Gateway (For new VPCs) | 1              |
-
-<br />
 Once your IAM user is configured, you will have to generate a programmatic access key for the user with which GitHub Actions can access your AWS account. Follow the instructions [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) and save the credentials for the next steps.
 
-Optionally, if you want to use an existing AWS account with already configured VPCs, subnets and other networking components, you can take a note of your **VPC ID, Subnet IDs (public and private, if any) and the region where these resources are set up.** You will still need an IAM user and the access key for provisioning the cluster and deploying the application.
+Optionally, if you want to use a pre-configured VPC, you can take a note of your **VPC ID, Subnet IDs (public and private, if any) and the region where these resources are set up.** You will still need an IAM user and the access key for provisioning the cluster and deploying the application.
 
 Your AWS account is now all set to host your EKS cluster!
 <br />
@@ -91,7 +102,7 @@ On the top-right corner, click on **Run workflow** and enter the values in the d
 2. **Enter cluster name**: The name you want to give to your cluster
 3. **Enter space separated existing subnet ids**: If you opted **true** for the first parameter, you need to enter the IDs of the subnets where you want to deploy your worker nodes. For example - **subnet-xytyc1872j subnet-034792hdjd**. In order to minimize costs, this solution deploys 2 worker nodes by default.
 4. **Enter existing vpc id**: If you opted **true** for the first parameter, you need to specify your VPC id. This value as well the previous one can be left blank in case of new VPCs.
-5. **Enter app version for React**: This solution bootstraps your cluster with 2 sample apps for demo purposes. You can specify any version number of your choice and it will be tagged to your container image and updated in the chart app version. For example - **0.0.1**
+5. **Enter app version for React**: This solution bootstraps your cluster with 2 sample frontend apps for demo purposes. You can specify any version number of your choice and it will be tagged to your container image and updated in the chart app version. For example - **0.0.1**
 6. **Enter app version for Angular**: See explanation above
 7. **Enter AWS Region**: Enter the AWS region wherein you want to deploy your cluster. For existing VPCs, this should be where your VPC is hosted. For example - **us-east-1**
 <br />
