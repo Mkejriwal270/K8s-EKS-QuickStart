@@ -12,7 +12,7 @@ With this solution, we intend to setup a full-fledged EKS cluster with a managed
 
 Once the cluster is up and running, NGINX ingress resources are provisioned using helm charts, including a public-facing Network Load Balancer(NLB) as an ingress-controller, which will be the endpoint for your applications. After this, the sample apps are built and pushed as docker-images to ECR and the application workloads are deployed using a separate set of helm-charts. The routes for the apps are configured in the ingress rules.
 
-All of these deployments are orchestrated using Github Actions - Github's in-house CI-CD solution - through a series of cascaded workflows which get executed one after another representing different stages in the deployment pipeline. Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click - again using a separate workflow which ensures that all your deployed resources are deleted and your account is cleaned up.
+All of these deployments are orchestrated using Github Actions - Github's in-house CI-CD solution - through a series of cascaded workflows which get executed one after another representing different stages in the deployment pipeline. Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click, again using a separate workflow which ensures that all your deployed resources are deleted and your account is cleaned up.
 
 Users have 2 options of deploying the cluster:
 
