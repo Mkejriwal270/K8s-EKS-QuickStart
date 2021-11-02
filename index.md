@@ -52,25 +52,15 @@ Similarly create all the secrets as shown below:
 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Secret-List.png)
 
-```markdown
-Syntax highlighted code block
+The secret names above refer to the following values:
 
-# Header 1
-## Header 2
-### Header 3
+- AWS_ACCESS_KEY_ID : Your AWS access key ID
+- AWS_SECRET_ACCESS_KEY : Your AWS secret access key
+- K8S_QS_TOKEN : Your Personal Access Token created earlier
+- AWS_ACCOUNT : Your AWS account ID
 
-\*\*
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](s3://mktestweb/K8s-Quickstart-Static/repo-page.png)
-```
+These secret names are being referred in the GitHub Actions workflows, so please make sure you modify these only if you know what you're doing. Otherwise, it is recommended to 
+store the secret names exactly as shown here to avoid runtime issues.
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
