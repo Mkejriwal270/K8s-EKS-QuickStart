@@ -17,6 +17,7 @@ For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) r
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/repo-page.png)
 <br />
 
+
 ### **2. AWS Setup:**
 
 If you don't already have an AWS account, you can create one by following [these](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account) steps.
@@ -37,8 +38,8 @@ Once your IAM user is configured, you will have to generate a programmatic acces
 Optionally, if you want to use an existing AWS account with already configured VPCs, subnets and other networking components, you can take a note of your **VPC ID, Subnet IDs (public and private, if any) and the region where these resources are set up.** You will still need an IAM user and the access key for provisioning the cluster and deploying the application.
 
 Your AWS account is now all set to host your EKS cluster!
-
 <br />
+
 ### **3. GitHub Actions Configuration:**
 
 Now you need to configure your repository so that GitHub Actions can deploy resources in your account. Here you will need:
@@ -69,7 +70,6 @@ The secret names above refer to the following values:
 These secret names are being referred in the GitHub Actions workflows, so it is recommended to store them exactly as shown here to avoid runtime issues.
 
 For more details go through the [project documentation](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/main/README.md).
-
 <br />
 ## **Running the solution**
 
