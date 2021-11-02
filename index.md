@@ -1,4 +1,4 @@
-# How to deploy your apps to EKS instantly
+# **How to deploy your apps to EKS instantly**
 
 So it’s 2021 & everybody wants to push their apps to Kubernetes. But let’s face it, this is still unknown territory for a lot of teams, especially those trying to modernise their existing legacy apps. Having to go through endless tutorials & blogs just for getting started can be daunting, especially when you have deadlines to meet. We know there's Minikube & similar other tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
 
@@ -8,15 +8,15 @@ Here is a solution that helps you start deploying and testing your application o
 
 Let’s get started.
 
-## Setting things up
+## **Setting things up**
 
-### 1. Cloning the repository:
+### **1. Cloning the repository:**
 
 For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository in your GitHub account. It has been created as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) so you can just click on **Use this template** on the homepage to create a new repository of the same name directly in your account with the existing file structure intact.
 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/repo-page.png)
 
-### 2. AWS Setup:
+### **2. AWS Setup:**
 
 If you don't already have an AWS account, you can create one by following [these](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account) steps.
 
@@ -36,7 +36,7 @@ Optionally, if you want to use an existing AWS account with already configured V
 
 Your AWS account is now all set to host your EKS cluster!
 
-### 3. GitHub Actions Configuration:
+### **3. GitHub Actions Configuration:**
 
 Now you need to configure your repository so that GitHub Actions can deploy resources in your account. Here you will need:
 
@@ -63,7 +63,7 @@ These secret names are being referred in the GitHub Actions workflows, so it is 
 
 For more details go through the [project documentation](https://github.com/Mkejriwal270/K8s-EKS-QuickStart/blob/main/README.md).
 
-## Running the solution
+## **Running the solution**
 
 Enough with all the setup. It's now time to see things in Action, literally!
 
