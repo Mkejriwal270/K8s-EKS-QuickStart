@@ -218,7 +218,7 @@ I am Milind, a Cloud & DevOps engineer from Bangalore, India. I love talking abo
 <!-- icons with padding -->
 
 [1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
-[2.1]: https://icon-library.com/images/linkedin-icon-black-and-white/linkedin-icon-black-and-white-25.jpg (linkedin icon with padding)
+[2.1]: https://icon-library.com/images/linkedin-icon-black-and-white/linkedin-icon-black-and-white-25.jpg (linkedin icon with padding =2x2)
 [3.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)
 
 
