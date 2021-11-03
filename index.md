@@ -165,15 +165,17 @@ The routes for the application are configured in the application ingress. The sa
 
 As discussed earlier, you have the option of destroying all resources once you are done with your development. This is a handy feature for developers who use their personal accounts for trying stuff out and need to keep a check on their AWS bills. Go to the Actions tab in your repo home-page and click on **Destroy-All**.
 
-
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Destroy-init.png)
 
-Similar to the resource creation workflow, the exact values need to be entered accordingly so that Terraform can perform a clean-up of your resources. This is also a multi-stage pipeline like the previous one, which first deletes the ingress resources including the load-balancer using helm charts and then the rest of the resources.
+<br />
+Similar to the resource creation workflow, the exact values need to be entered accordingly so that Terraform can perform a clean-up of your resources. 
+<br />
 
+This is also a multi-stage pipeline like the previous one, which first deletes the ingress resources including the load-balancer using helm charts and then the rest of the resources.
 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Destroy-Overview.png)
 
-
+<br />
 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Destroy-Log.png)
 
