@@ -1,4 +1,4 @@
-So it’s 2021 & everybody wants to push their apps to Kubernetes. But let’s face it, this is still unknown territory for a lot of teams, especially those trying to modernise their existing legacy apps. Having to go through endless tutorials & blogs just for getting started can be daunting, especially when you have deadlines to meet. We know there's Minikube & similar other tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
+So it’s 2021 & everybody wants to move their applications to Kubernetes. As a matter of fact, this is still unknown territory for a lot of developers. Having to go through endless tutorials & blogs just for getting started can be daunting, especially when you have deadlines to meet. We know there's Minikube & similar other tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
 
 Not anymore, though!
 
@@ -7,9 +7,9 @@ Here is a solution that helps you start deploying and testing your application o
 Let’s get started.
 <br />
 ## **What We Are Building**
-With this solution, we intend to setup a full-fledged EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. To keep costs low, this solution deploys only 2 worker nodes by default. The apps will be built using docker and the images will be stored in Amazon's Elastic Container Registry (ECR). As mentioned before, the infrastructure components\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
+With this solution, we intend to setup an EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. To keep costs low, we deploy only 2 worker nodes by default. The container images will be stored in Amazon's Elastic Container Registry (ECR). As mentioned before, the infrastructure components\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
 
-All of these deployments are orchestrated using Github Actions - Github's in-house CI-CD solution - through a series of cascaded workflows representing different stages in the deployment pipeline. Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click, using a separate workflow which ensures that all your deployed resources are deleted and your account is cleaned up.
+All of these deployments are orchestrated using Github Actions - Github's in-house CI-CD solution - through a series of cascaded workflows representing different stages in the deployment pipeline. Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click, using a separate workflow which ensures that all your deployed resources are cleaned up.
 
 Users have 2 options of deploying the cluster:
 
