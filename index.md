@@ -8,9 +8,9 @@ Let’s get started.
 <br />
 ## **What We Are Building**
 <br />
-With this solution, we intend to setup a full-fledged EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. In order to minimize costs, this solution deploys only 2 worker nodes by default. The apps will be built using docker and the images will be stored in Amazon's Elastic Container Registry (ECR) which will be managed as part of this project. As mentioned before, the infrastructure components\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
+With this solution, we intend to setup a full-fledged EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. To keep costs low, this solution deploys only 2 worker nodes by default. The apps will be built using docker and the images will be stored in Amazon's Elastic Container Registry (ECR). As mentioned before, the infrastructure components\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
 
-All of these deployments are orchestrated using Github Actions - Github's in-house CI-CD solution - through a series of cascaded workflows which get executed one after another representing different stages in the deployment pipeline. Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click, again using a separate workflow which ensures that all your deployed resources are deleted and your account is cleaned up.
+All of these deployments are orchestrated using Github Actions - Github's in-house CI-CD solution - through a series of cascaded workflows representing different stages in the deployment pipeline. Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click, using a separate workflow which ensures that all your deployed resources are deleted and your account is cleaned up.
 
 Users have 2 options of deploying the cluster:
 
