@@ -133,7 +133,7 @@ If you look at the Actions tab, a new instance of the Fire-it-Up workflow has be
 <br />
 
 <br />
-![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-Terraform.png)
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-terraform.png)
 <br />
 
 ## **Accessing the apps**
