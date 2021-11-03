@@ -90,7 +90,7 @@ Enough with all the setup. It's now time to see things in action, literally!
 On your repository homepage, go to **Actions** tab, and click on **Fire-it-Up** ( I had to make it dramatic! )
 
 <br />
-![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-intro.png)
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/workflow-view.png)
 <br />
 This is basically a "parent" GitHub Actions workflow which invokes a series of different "child" workflows based on parameters entered by the user as inputs. These worflows perform the following tasks in the given order:
 
@@ -100,7 +100,7 @@ This is basically a "parent" GitHub Actions workflow which invokes a series of d
 - Deploy sample app images as Kubernetes workloads and expose them via Ingress Controllers using Helm
 <br />
 <br />
-![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-dropdown.png)
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/workflow-list.png)
 <br />
 
 On the top-right corner, click on **Run workflow** and enter the values in the dropdown form as follows:
