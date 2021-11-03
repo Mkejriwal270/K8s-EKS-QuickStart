@@ -126,11 +126,11 @@ That's all!
 
 Your new K8s cluster and application will be deployed shortly. Usually, EKS takes around 10-15 minutes to provision a new cluster, giving you enough time to grab a coffee or a snack after all the hard work you've done!
 
-If you look at the Actions tab, a new instance of the Fire-it-Up workflow has been triggered. Clicking on it will show you a visual summary of the solution and a detailed log of the execution of each stage in real-time. If any of these stages fail, the execution stops completely.
-
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-overview-initial.png)
 <br />
+
+If you look at the Actions tab, a new instance of the Fire-it-Up workflow has been triggered. Clicking on it will show you a visual summary of the solution and a detailed log of the execution of each stage in real-time. If any of these stages fail, the execution stops completely.
 
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-terraform.png)
