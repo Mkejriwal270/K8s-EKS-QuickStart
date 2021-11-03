@@ -149,6 +149,13 @@ Once the workflow execution is completed, you will be able to access your apps u
 
 The routes for the application are configured in the application ingress. The sample apps are available at the **/angular-app** and **/react-app** locations as shown below. These can be customized according to your application requirements.
 
+<br />
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Angular-App.png)
+<br />
+
+<br />
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/React-App.png)
+<br />
 
 ## **Cleaning-up resources**
 
