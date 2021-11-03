@@ -192,12 +192,14 @@ The possibilities are endless and we will discuss some of these use-cases in a s
 
 ## **Further Reading**
 
-Kubernetes<br />
-Ingress<br />
-GitHub Actions<br />
-Terraform<br />
-Helm<br />
-AWS<br />
+Although this project has been designed to ensure minimum dependency on documentation or other tutorials, 
+
+Kubernetes - [Official docs](https://kubernetes.io/docs/home/)<br />
+Ingress - [NGINX docs](https://kubernetes.github.io/ingress-nginx/)<br />
+GitHub Actions - [GitHub docs](https://docs.github.com/en/actions)<br />
+Terraform - [Hashicorp docs](https://www.terraform.io/docs/index.html)<br />
+Helm - [Official docs](https://helm.sh/docs/)<br />
+AWS - [Official docs](https://aws.amazon.com/eks/)<br />
 
 ## **About Me**
 
