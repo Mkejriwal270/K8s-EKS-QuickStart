@@ -182,6 +182,14 @@ This is also a multi-stage pipeline like the previous one, which first deletes t
 
 ## **Customization**
 
+Since the central idea of this solution is simplicity and flexibility, there are countless areas where it can be fine-tuned to meet requirements specific to your use case. For example:
+- Inside the [app]() folder, the sample application source code folders can be easily replaced with your own app folder. This would require all references of the folder like [angular]() or [react]() to be replaced with your own app name.
+- The API server endpoint can be restricted to a private network by modifying the eks.tf file in the [existing]() or [new]() vpc folder.
+- The application itself can be made private by specifying the load-balancer type as internal in the ingress-controler service manifest [file]().
+- The worker node type can be changed based on different kinds of workloads in the eks.tf file
+
+The possibilities are endless and we will discuss some of these use-cases in a separate post related to this project. The extended documentation for the project will be updated soon.
+
 ## **Further Reading**
 
 Kubernetes
