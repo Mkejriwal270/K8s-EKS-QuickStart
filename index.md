@@ -27,8 +27,7 @@ The control plane will have both public and private endpoint access so that GitH
 | t2.small worker nodes      | 2              |
 | NAT Gateway (For new VPCs) | 1              |
 | ECR Repository             | 2              |
-| NAT Gateway                | 1              |
-| Elastic IP                 | 1              |
+| Elastic IP (For new VPCs   | 1              |
 | Network Load Balancer      | 1              |
 
 <br />
