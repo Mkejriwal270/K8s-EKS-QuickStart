@@ -124,12 +124,18 @@ Once your inputs are ready, click on the **Run workflow** button.
 
 That's all! 
 
-Your K8s application will be deployed end-to-end shortly. Usually, EKS takes around 10-15 minutes to provision a new cluster, giving you enough time to grab a coffee or a snack after all the hard work you've done!
+Your new K8s cluster and application will be deployed shortly. Usually, EKS takes around 10-15 minutes to provision a new cluster, giving you enough time to grab a coffee or a snack after all the hard work you've done!
 
 If you look at the Actions tab, a new instance of the Fire-it-Up workflow has been triggered. Clicking on it will show you a visual summary of the solution and a detailed log of the execution of each stage in real-time. If any of these stages fail, the execution stops completely.
 
+<br />
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-overview-initial.png)
+<br />
+
 ## **Accessing the apps**
 Once the workflow execution is completed, you will be able to access your apps using an AWS Network Load Balancer (NLB), deployed by NGINX ingress-controller service 
+
+
 
 ## **Cleaning-up resources**
 
