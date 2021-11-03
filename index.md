@@ -173,6 +173,7 @@ Similar to the resource creation workflow, the exact values need to be entered a
 <br />
 This is also a multi-stage pipeline like the previous one, which first deletes the ingress resources including the load-balancer using helm charts and then the rest of the resources.
 <br />
+<br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Destroy-Overview.png)
 <br />
 <br />
