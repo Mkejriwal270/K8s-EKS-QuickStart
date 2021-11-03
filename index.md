@@ -195,7 +195,7 @@ The possibilities are endless and we will discuss some of these use-cases in a s
 Although this project has been designed to ensure minimum dependency on documentation or tutorials, the following links can be useful to understand how these technologies work under the hood and how they can be tweaked to meet our requirements:
 
 Kubernetes - [Official docs](https://kubernetes.io/docs/home/)<br />
-Ingress - [NGINX docs](https://kubernetes.github.io/ingress-nginx/)<br />
+Ingress - [Official docs](https://kubernetes.io/docs/concepts/services-networking/ingress/)<br />
 GitHub Actions - [GitHub docs](https://docs.github.com/en/actions)<br />
 Terraform - [Hashicorp docs](https://www.terraform.io/docs/index.html)<br />
 Helm - [Official docs](https://helm.sh/docs/)<br />
