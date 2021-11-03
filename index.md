@@ -129,7 +129,7 @@ Your new K8s cluster and application will be deployed shortly. Usually, EKS take
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-overview-initial.png)
 <br />
-If you look at the Actions tab, a new instance of the Fire-it-Up workflow has been triggered. Clicking on it will show you a visual summary of the solution and a detailed log of the execution of each stage in real-time. If any of these stages fail, the execution stops completely.
+If you look at the Actions tab, a new instance of the **Fire-it-Up** workflow has been triggered. Clicking on it will show you a visual summary of the solution and a detailed execution log of each stage in real-time. If any of these stages fail, the execution stops completely.
 
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-terraform.png)
@@ -141,11 +141,13 @@ If you look at the Actions tab, a new instance of the Fire-it-Up workflow has be
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-overview.png)
 <br />
 
-Once the workflow execution is completed, you will be able to access your apps using an AWS Network Load Balancer (NLB) URL, deployed by NGINX ingress-controller service. Go to the succesfully completed execution of the **Fire-it-Up** workflow and click on 
+Once the workflow execution is completed, you will be able to access your apps using an AWS Network Load Balancer (NLB) URL, deployed by NGINX ingress-controller service. Go to the succesfully completed execution of the **Fire-it-Up** workflow and click on **setup_infra_components / Helm_Install**. This is the stage where all ingress resources are provisioned. In the execution logs, click on the **Get LB URL** step and copy the **EXTERNAL IP** from the command drop-down. This is the public URL of your application.
 
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-exec.png)
 <br />
+
+The routes for the application are configured in the application ingress. The sample apps are available at the **/angular-app** and **/react-app** locations as shown below. These can be customized according to your application requirements.
 
 
 ## **Cleaning-up resources**
