@@ -136,8 +136,16 @@ If you look at the Actions tab, a new instance of the Fire-it-Up workflow has be
 <br />
 
 ## **Accessing the apps**
-Once the workflow execution is completed, you will be able to access your apps using an AWS Network Load Balancer (NLB), deployed by NGINX ingress-controller service 
 
+<br />
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-overview.png)
+<br />
+
+Once the workflow execution is completed, you will be able to access your apps using an AWS Network Load Balancer (NLB) URL, deployed by NGINX ingress-controller service. Go to the succesfully completed execution of the **Fire-it-Up** workflow and click on 
+
+<br />
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-exec.png)
+<br />
 
 
 ## **Cleaning-up resources**
