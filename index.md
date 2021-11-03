@@ -170,7 +170,7 @@ As discussed earlier, you have the option of destroying all resources once you a
 <br />
 Similar to the resource creation workflow, the exact values need to be entered accordingly so that Terraform can perform a clean-up of your resources. 
 <br />
-
+<br />
 This is also a multi-stage pipeline like the previous one, which first deletes the ingress resources including the load-balancer using helm charts and then the rest of the resources.
 
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Destroy-Overview.png)
