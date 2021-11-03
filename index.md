@@ -139,6 +139,7 @@ If you look at the Actions tab, a new instance of the **Fire-it-Up** workflow ha
 
 Once the workflow execution is completed, you will be able to access your apps using an AWS Network Load Balancer (NLB) URL, deployed by NGINX ingress-controller service.
 <br />
+<br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-overview.png)
 <br />
 
