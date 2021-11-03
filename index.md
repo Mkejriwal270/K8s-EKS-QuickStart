@@ -153,7 +153,7 @@ The routes for the application are configured in the application ingress. The sa
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Angular-App.png)
 <br />
 
-
+<br />
 
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/React-App.png)
