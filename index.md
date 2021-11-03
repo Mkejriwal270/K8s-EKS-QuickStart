@@ -99,6 +99,10 @@ This is basically a "parent" GitHub Actions workflow which invokes a series of d
 - Provision Kubernetes RBAC and Ingress resources using Helm
 - Build sample apps using Dockerfiles
 - Deploy sample app images as Kubernetes workloads and expose them via Ingress Controllers using Helm
+<br />
+<br />
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-dropdown.png)
+<br />
 
 On the top-right corner, click on **Run workflow** and enter the values in the dropdown form as follows:
 
@@ -115,7 +119,22 @@ On the top-right corner, click on **Run workflow** and enter the values in the d
 6. **Enter app version for Angular**: Same as above
 
 7. **Enter AWS Region**: Enter the AWS region wherein you want to deploy your cluster. For existing VPCs, this should be where your VPC is hosted. For example - **us-east-1**
-<br />
-<br />
-![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Actions-dropdown.png)
-<br />
+
+
+Once your inputs are ready, click on the **Run workflow** button. That's all! Your K8s application will be deployed end-to-end shortly. Usually, EKS takes around 10-15 minutes to provision a new cluster, giving you enough time to grab a coffee or a snack after all the hard work you've done!
+
+If you look at the Actions tab, a new instance of the Fire-it-Up workflow has been triggered. Clicking on it will show you a visual summary of the solution and a detailed log of the execution of each stage in real-time. If any of these stages fail, the execution stops completely.
+
+## **Accessing the apps**
+Once the workflow execution is completed, you will be able to access your apps using an AWS Network Load Balancer (NLB), deployed by NGINX ingress-controller service 
+
+## **Cleaning-up resources**
+
+## **Further Reading**
+
+Kubernetes
+Ingress
+GitHub Actions
+Terraform
+Helm
+AWS 
