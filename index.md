@@ -208,7 +208,7 @@ I am Milind, a Cloud & DevOps engineer from Bangalore, India. I love talking abo
 <!-- display the social media buttons in your README -->
 
 [![alt text][1.1]][1]
-<a href="https://www.linkedin.com/in/milind-kejriwal"><img src="https://icon-library.com/images/linkedin-icon-black-and-white/linkedin-icon-black-and-white-25.jpg" width="100" height="100"/></a>
+<a href="https://www.linkedin.com/in/milind-kejriwal"><img src="https://icon-library.com/images/linkedin-icon-black-and-white/linkedin-icon-black-and-white-25.jpg" width="25" height="25"/></a>
 [![alt text][3.1]][3]
 
 
