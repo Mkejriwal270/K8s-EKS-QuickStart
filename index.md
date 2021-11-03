@@ -192,7 +192,7 @@ The possibilities are endless and we will discuss some of these use-cases in a s
 
 ## **Further Reading**
 
-Although this project has been designed to ensure minimum dependency on documentation or other tutorials, 
+Although this project has been designed to ensure minimum dependency on documentation or tutorials, the following links can be useful to understand how these technologies work under the hood and how they can be tweaked to meet our requirements:
 
 Kubernetes - [Official docs](https://kubernetes.io/docs/home/)<br />
 Ingress - [NGINX docs](https://kubernetes.github.io/ingress-nginx/)<br />
