@@ -132,6 +132,10 @@ If you look at the Actions tab, a new instance of the Fire-it-Up workflow has be
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-overview-initial.png)
 <br />
 
+<br />
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/Workflow-Terraform.png)
+<br />
+
 ## **Accessing the apps**
 Once the workflow execution is completed, you will be able to access your apps using an AWS Network Load Balancer (NLB), deployed by NGINX ingress-controller service 
 
