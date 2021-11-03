@@ -121,7 +121,11 @@ On the top-right corner, click on **Run workflow** and enter the values in the d
 7. **Enter AWS Region**: Enter the AWS region wherein you want to deploy your cluster. For existing VPCs, this should be where your VPC is hosted. For example - **us-east-1**
 
 
-Once your inputs are ready, click on the **Run workflow** button. That's all! Your K8s application will be deployed end-to-end shortly. Usually, EKS takes around 10-15 minutes to provision a new cluster, giving you enough time to grab a coffee or a snack after all the hard work you've done!
+Once your inputs are ready, click on the **Run workflow** button. 
+
+That's all! 
+
+Your K8s application will be deployed end-to-end shortly. Usually, EKS takes around 10-15 minutes to provision a new cluster, giving you enough time to grab a coffee or a snack after all the hard work you've done!
 
 If you look at the Actions tab, a new instance of the Fire-it-Up workflow has been triggered. Clicking on it will show you a visual summary of the solution and a detailed log of the execution of each stage in real-time. If any of these stages fail, the execution stops completely.
 
