@@ -192,9 +192,9 @@ The possibilities are endless and we will discuss some of these use-cases in a s
 
 ## **Further Reading**
 
-Kubernetes
-Ingress
-GitHub Actions
-Terraform
-Helm
-AWS 
+Kubernetes<br />
+Ingress<br />
+GitHub Actions<br />
+Terraform<br />
+Helm<br />
+AWS<br />
