@@ -1,6 +1,6 @@
-----
-empty
-----
+---
+# even an empty front matter is ok
+---
 So it’s 2021 & everybody wants to move their applications to Kubernetes. As a matter of fact, this is still unknown territory for a lot of developers. Having to go through endless tutorials & blogs just for getting started can be daunting, especially when you have deadlines to meet. We know there's Minikube & similar other tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
 
 Not anymore, though!
