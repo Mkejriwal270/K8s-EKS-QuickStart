@@ -1,1 +1,7 @@
 theme: jekyll-theme-cayman
+social:
+  name: Milind Kejriwal
+  links:
+    - https://twitter.com/KejriwalMilind
+    - https://www.linkedin.com/in/milind-kejriwal
+    - https://github.com/Mkejriwal270
