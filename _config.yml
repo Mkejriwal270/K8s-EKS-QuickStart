@@ -7,12 +7,10 @@ social:
     - https://github.com/Mkejriwal270
 plugins:
   - jekyll-seo-tag
-image: http://41.media.tumblr.com/173cb5c51a1c308ab022a786f69353f3/tumblr_nwncf1T2ht1rl195mo1_1280.jpg
+image: https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/K8s-Quckstart.jpg
 defaults:
   - scope:
       path: ""
     values:
       image:
-        path: https://41.media.tumblr.com/173cb5c51a1c308ab022a786f69353f3/tumblr_nwncf1T2ht1rl195mo1_1280.jpg
-        height: 100
-        width: 100
+        path: https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/K8s-Quckstart.jpg
