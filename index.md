@@ -3,7 +3,11 @@ layout: default
 # even an empty front matter is ok
 ---
 
-So it’s 2021 & everybody wants to move their applications to Kubernetes. As a matter of fact, this is still unknown territory for a lot of developers. Having to go through endless tutorials & blogs just for getting started can be daunting, especially when you have deadlines to meet. We know there's Minikube & similar other tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
+<br />
+![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/K8s-Quckstart.jpg)
+<br />
+
+So it’s 2021 & everybody wants to move their applications to Kubernetes. As a matter of fact, this is still unknown territory to a lot of developers. Having to go through endless tutorials & blogs just for getting started can be daunting, especially when you have deadlines to meet. We know there's Minikube & similar other tools out there, but enterprise cloud environments & their constraints are often hard to replicate locally.
 
 Not anymore, though!
 
@@ -12,7 +16,7 @@ Here is a solution that helps you start deploying and testing your application o
 Let’s get started.
 <br />
 ## **What We Are Building**
-With this solution, we intend to setup an EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. To keep costs low, we deploy only 2 worker nodes by default. The container images will be stored in Amazon's Elastic Container Registry (ECR). As mentioned before, the infrastructure components\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
+With this solution, we intend to setup an EKS cluster with a managed node-group, ingress resources, RBAC & Security components and application workloads for 2 sample apps - one React and another Angular. To keep costs low, we deploy only 2 worker nodes by default. The container images will be stored in Amazon's Elastic Container Registry (ECR). The infrastructure components\* will be created and managed by Terraform, with the state file stored and updated within the repository itself.
 
 All of these deployments are orchestrated using Github Actions - Github's in-house CI-CD solution - through a series of cascaded workflows representing different stages in the deployment pipeline. Once your development is completed and you no longer need the resources, you have the option of destroying them with - you guessed it right - a single click, using a separate workflow which ensures that all your deployed resources are cleaned up.
 
@@ -41,7 +45,7 @@ The control plane will have both public and private endpoint access so that GitH
 
 ### **1. Cloning the repository:**
 
-For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository in your GitHub account. It has been created as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) so you can just click on **Use this template** on the homepage to create a new repository of the same name directly in your account with the existing file structure intact.
+For starters, clone [this](https://github.com/Mkejriwal270/K8s-EKS-QuickStart) repository in your GitHub account. It has been created as a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template), so clicking on **Use this template** on the homepage will create a new repository in your account with the existing file structure intact.
 
 <br />
 ![Image](https://mktestweb.s3.amazonaws.com/K8s-Quickstart-Static/repo-page.png)
